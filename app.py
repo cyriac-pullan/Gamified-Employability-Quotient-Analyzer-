@@ -6,6 +6,9 @@ from sqlalchemy.orm import DeclarativeBase
 from werkzeug.middleware.proxy_fix import ProxyFix
 from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
+
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
 
@@ -20,7 +23,7 @@ app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key-change-in-prod
 app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
 # Configure the database
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://neondb_owner:npg_ZEYxH6XJTb3l@ep-purple-block-a553h0y8-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL", "sqlite:///employability_game.db")
 app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
     "pool_recycle": 300,
     "pool_pre_ping": True,
@@ -40,9 +43,6 @@ with app.app_context():
 
 # Import routes
 import routes
-
-# Load environment variables
-load_dotenv()
 
 # Print DATABASE_URL
 print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
