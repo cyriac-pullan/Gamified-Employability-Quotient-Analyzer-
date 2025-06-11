@@ -1,4 +1,4 @@
-name: Deploy Flask App
+name: Deploy Flask App to GitHub Pages
 
 on:
   push:
@@ -23,13 +23,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Run tests
+    - name: Build static files
       run: |
-        python -m pytest
+        python -m flask build
     
-    - name: Deploy to production
-      if: github.ref == 'refs/heads/main'
-      env:
-        DATABASE_URL: ${{ secrets.DATABASE_URL }}
-      run: |
-        echo "Deploying to production..." 
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build 
