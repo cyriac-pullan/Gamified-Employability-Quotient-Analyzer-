@@ -467,13 +467,16 @@ def challenges():
                          user=user,
                          user_challenges=user_challenges)
 
-# Initialize default data
-@app.before_first_request
-def create_default_data():
-    # Create default badges if they don't exist
-    if Badge.query.count() == 0:
-        create_default_badges()
-    
-    # Create default challenges if they don't exist
-    if Challenge.query.count() == 0:
-        create_default_challenges()
+# Initialize default data on app startup
+def initialize_default_data():
+    with app.app_context():
+        # Create default badges if they don't exist
+        if Badge.query.count() == 0:
+            create_default_badges()
+        
+        # Create default challenges if they don't exist
+        if Challenge.query.count() == 0:
+            create_default_challenges()
+
+# Call initialization function
+initialize_default_data()
