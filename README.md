@@ -1,187 +1,172 @@
-🎯 Gamified Employability Quotient Analyzer
+# 🎯 Gamified Employability Quotient Analyzer
 
-The Gamified Employability Quotient Analyzer (GEQA) is a web-based application that evaluates an individual’s employability using a data-driven scoring system combined with gamification.
+The **Gamified Employability Quotient Analyzer (GEQA)** is a web-based application that evaluates an individual’s employability using a data-driven scoring system combined with gamification.
 
-The system supports both User and Admin roles, enabling structured assessment, monitoring, and improvement of employability metrics in an engaging way.
+The system supports **both User and Admin roles**, enabling structured assessment, monitoring, and improvement of employability metrics in an engaging and interactive manner.
 
-🚀 Key Features
-👤 User Features
+---
 
-🧠 Employability Quotient (EQ) calculation
+## 🚀 Features
 
-🎮 Gamified assessment experience
+### 👤 User Module
+- Employability Quotient (EQ) calculation  
+- Gamified assessment experience  
+- Skill and attribute evaluation  
+- Visual feedback and improvement suggestions  
+- User-friendly web interface  
 
-📊 Skill & attribute evaluation
+### 🛠️ Admin Module
+- Secure admin access  
+- View and manage user records  
+- Monitor employability scores and trends  
+- Control assessment parameters  
+- Manage uploaded data  
+- Analyze overall employability insights  
 
-📈 Visual feedback and improvement suggestions
+---
 
-🌐 Simple and interactive web interface
+## 🛠️ Tech Stack
 
-🛠️ Admin Features
+- Backend: Python (Flask)
+- Frontend: HTML, CSS, JavaScript
+- Data Processing: Python logic (ML-ready structure)
+- Deployment: Render / Heroku
+- Version Control: Git & GitHub
 
-🔐 Admin login & access control
+---
 
-👥 View and manage user records
+## 📂 Project Structure
 
-📊 Monitor employability scores and trends
-
-🧩 Control assessment parameters & logic
-
-📁 Manage uploaded data and inputs
-
-📈 Analyze overall employability insights
-
-🛠️ Tech Stack
-
-Backend: Python (Flask)
-
-Frontend: HTML, CSS, JavaScript
-
-Data Processing: Python logic / ML-ready structure
-
-Deployment: Render / Heroku
-
-Version Control: Git & GitHub
-
-📂 Project Structure
 Gamified-Employability-Quotient-Analyzer/
-├── .github/                # GitHub workflows (if any)
-├── instance/               # App instance / database files
-├── static/                 # CSS, JS, images
-├── templates/              # HTML templates (user & admin pages)
-├── uploads/                # Uploaded files / user inputs
-├── app.py                  # Main Flask application
-├── main.py                 # Optional runner
-├── models.py               # Employability scoring & logic
-├── routes.py               # User & admin routes
-├── utils.py                # Helper / utility functions
-├── requirements.txt        # Python dependencies
-├── Procfile                # Deployment config
-├── render.yaml             # Render deployment config
-└── README.md               # Project documentation
+├── .github/
+├── instance/
+├── static/
+├── templates/
+├── uploads/
+├── app.py
+├── main.py
+├── models.py
+├── routes.py
+├── utils.py
+├── requirements.txt
+├── Procfile
+├── render.yaml
+└── README.md
 
-🧠 How It Works
-User Flow
+---
 
-User accesses the application.
+## 🧠 How It Works
 
-User submits details related to skills, education, and employability factors.
+### User Flow
+1. User accesses the application.
+2. User submits details related to skills, education, and employability factors.
+3. Backend processes the input data.
+4. Employability Quotient (EQ) score is calculated.
+5. Results are displayed with gamified feedback.
 
-Backend processes data using logic in models.py.
+### Admin Flow
+1. Admin logs in securely.
+2. Admin views user data and EQ scores.
+3. Admin analyzes employability trends.
+4. Admin manages assessment data and system parameters.
 
-An Employability Quotient (EQ) score is calculated.
+---
 
-Results are displayed with gamified feedback.
+## ⚙️ Installation & Setup
 
-Admin Flow
+### Prerequisites
+- Python 3.9+
+- pip
 
-Admin logs in through the admin interface.
-
-Admin views user data and employability scores.
-
-Admin monitors trends and performance analytics.
-
-Admin manages assessment logic and system data.
-
-⚙️ Installation & Setup
-Prerequisites
-
-Python 3.9+
-
-pip package manager
-
-Step 1: Clone the Repository
-git clone https://github.com/cyriac-pullan/Gamified-Employability-Quotient-Analyzer-.git
+### Clone the Repository
+git clone https://github.com/cyriac-pullan/Gamified-Employability-Quotient-Analyzer-.git  
 cd Gamified-Employability-Quotient-Analyzer-
 
-Step 2: Create Virtual Environment
+### Create Virtual Environment
 python -m venv venv
 
+Activate the environment:
 
-Activate it:
-
-Windows
-
+Windows:
 venv\Scripts\activate
 
-
-macOS / Linux
-
+macOS / Linux:
 source venv/bin/activate
 
-Step 3: Install Dependencies
+### Install Dependencies
 pip install -r requirements.txt
 
-▶️ Running the Application
+---
+
+## ▶️ Run the Application
+
 python app.py
 
-
-The application will run at:
-
+The application runs at:
 http://127.0.0.1:5000/
 
+User interface → /  
+Admin interface → /admin (if configured)
 
-User interface → /
+---
 
-Admin interface → /admin (if configured in routes)
+## ☁️ Deployment
 
-☁️ Deployment
+The project is deployment-ready.
 
-The project supports cloud deployment:
+- Render: Uses render.yaml  
+- Heroku: Uses Procfile  
 
-Procfile → Heroku
+Steps:
+1. Push code to GitHub
+2. Connect repository to hosting platform
+3. Select Python environment
+4. Deploy
 
-render.yaml → Render
+---
 
-Render Deployment
+## 🎯 Use Cases
 
-Push the repository to GitHub
+- Students evaluating employability readiness  
+- Colleges tracking student skill development  
+- Placement and training departments  
+- Hackathons and academic projects  
+- Career development platforms  
 
-Connect GitHub repo to Render
+---
 
-Select Python environment
+## 🔐 Roles Summary
 
-Deploy 🚀
+Role | Capabilities  
+User | Take assessments, view EQ score  
+Admin | Manage users, analyze employability data  
 
-🎯 Use Cases
+---
 
-Students assessing employability readiness
+## 🤝 Contributing
 
-Colleges tracking student skill development
+1. Fork the repository  
+2. Create a feature branch  
+3. Commit your changes  
+4. Open a Pull Request  
 
-Placement & training departments
+---
 
-Hackathons and academic evaluations
+## 📄 License
 
-Skill development & career platforms
+No license specified yet.  
+You may add MIT or Apache 2.0 if open-source reuse is intended.
 
-🔐 Roles Summary
-Role	Capabilities
-User	Take assessments, view EQ score, get feedback
-Admin	Manage users, analyze scores, monitor trends
-🤝 Contributing
+---
 
-Contributions are welcome!
+## 👤 Author
 
-Fork the repository
-
-Create a new branch
-
-Commit your changes
-
-Open a Pull Request
-
-📄 License
-
-No license specified currently.
-You may add MIT / Apache 2.0 if open-source usage is intended.
-
-👤 Author
-
-Cyriac Paul Pullan
-B.Tech – Artificial Intelligence & Data Science
+Cyriac Paul Pullan  
+B.Tech – Artificial Intelligence & Data Science  
 GitHub: https://github.com/cyriac-pullan
 
-⭐ Support
+---
 
-If you like this project, give it a ⭐ on GitHub!
+## ⭐ Support
+
+If you find this project useful, please star the repository.
